@@ -19,12 +19,17 @@ public:
         vector<vector<int>> ans;
         while(s<=e)
         {
-            if(customfunction.f(mid,z-mid)==z)
+            if(customfunction.f(mid,z-mid)==z )
             {
                 vector<int> temp;
+                vector<int> temp1;
                 temp.push_back(mid);
                 temp.push_back(z-mid);
+                temp1.push_back(z-mid);
+                temp1.push_back(mid);
+                ans.push_back(temp1);
                 ans.push_back(temp);
+                
                 e = mid-1;
             }
             else{
